@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Joist and rafter span quick check | Truscale</title>
+<meta name="description" content="Quick reference span check for floor joists and rafters: bending, shear and deflection from first principles. Not a design. A Texas licensed PE must design the structure.">
+<link rel="canonical" href="https://www.example.com/span-check.html">
+<link rel="alternate" hreflang="en" href="https://www.example.com/span-check.html">
+<link rel="alternate" hreflang="es" href="https://www.example.com/es/span-check.html">
+<link rel="alternate" hreflang="x-default" href="https://www.example.com/span-check.html">
+<meta name="theme-color" content="#1B1D1F">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Truscale">
+<meta property="og:title" content="Joist and rafter span quick check | Truscale">
+<meta property="og:description" content="Quick reference span check for floor joists and rafters: bending, shear and deflection from first principles. Not a design. A Texas licensed PE must design the structure.">
+<meta property="og:url" content="https://www.example.com/span-check.html">
+<meta property="og:image" content="https://www.example.com/img/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="es_US">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preload" href="assets/fonts/inter-tight-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/css/site.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="draft-banner" role="note">Draft name, pending trademark check</div>
+<header class="site-header">
+  <div class="wrap">
+    <a class="wordmark" href="index.html" aria-label="Truscale, home">Truscale</a>
+    <nav class="nav" id="site-nav" aria-label="Main">
+      <a href="features.html">Features</a><a href="tools.html" aria-current="page">Free tools</a><a href="pricing.html">Pricing</a><a href="about.html">About</a>
+      <a class="nav-cta" href="beta.html">Apply for the beta</a>
+    </nav>
+    <div class="header-actions">
+      <div class="lang-toggle" role="group" aria-label="Language">
+        <span aria-current="true" lang="en">EN</span><a href="es/span-check.html" hreflang="es" lang="es" aria-label="Español">ES</a>
+      </div>
+      <a class="btn btn-primary btn-sm" href="beta.html">Apply for the beta</a>
+      <button class="menu-btn" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    </div>
+  </div>
+</header>
+<main id="main">
+
+
+<section class="page-head on-dark">
+  <div class="wrap">
+    <p class="crumbs"><a href="tools.html">Free tools</a></p>
+    <h1>Joist and rafter span quick check</h1>
+    <p class="lede">Pick the lumber, spacing and load. See the longest simple span and which check governs.</p>
+  </div>
+</section>
+<section class="section-tight">
+  <div class="wrap">
+    <p class="warn" role="note">Quick reference, not a design. A Texas licensed PE must design the structure.</p>
+    <noscript><p class="warn">This tool needs JavaScript turned on in your browser.</p></noscript>
+    <div class="tool">
+      <form class="panel" id="span-form" novalidate>
+        <h2>Member and load</h2>
+        <div class="fields">
+          <div class="field full">
+            <label for="species">Species and grade</label>
+            <select id="species" name="species">
+              <option value="sp-2" selected>Southern Pine No. 2</option>
+              <option value="dfl-1">Douglas Fir-Larch No. 1</option>
+              <option value="dfl-2">Douglas Fir-Larch No. 2</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="size">Size</label>
+            <select id="size" name="size">
+              <option value="2x6">2x6</option>
+              <option value="2x8" selected>2x8</option>
+              <option value="2x10">2x10</option>
+              <option value="2x12">2x12</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="span">Your span (optional)</label>
+            <input id="span" name="span" type="text" inputmode="decimal" placeholder="13'-0&quot;" aria-describedby="span-hint">
+            <span class="hint" id="span-hint">Feet and inches, like 13'-6". Rafters: horizontal span.</span>
+          </div>
+          <fieldset class="field full">
+            <legend>Spacing, on center</legend>
+            <div class="seg">
+              <label><input type="radio" name="spacing" value="12"><span>12 in</span></label><label><input type="radio" name="spacing" value="16" checked><span>16 in</span></label><label><input type="radio" name="spacing" value="19.2"><span>19.2 in</span></label><label><input type="radio" name="spacing" value="24"><span>24 in</span></label>
+            </div>
+          </fieldset>
+          <div class="field full">
+            <label for="preset">Load</label>
+            <select id="preset" name="preset">
+              <optgroup label="Floor joists, deflection L/360">
+                <option value="floor-40" selected>Living areas: 40 psf live, 10 psf dead</option>
+                <option value="floor-30">Sleeping rooms: 30 psf live, 10 psf dead</option>
+                <option value="floor-40-tile">Tile or heavy finish: 40 psf live, 20 psf dead</option>
+              </optgroup>
+              <optgroup label="Rafters, deflection L/240">
+                <option value="roof-20-10">Roof: 20 psf live, 10 psf dead</option>
+                <option value="roof-20-15">Heavier roofing: 20 psf live, 15 psf dead</option>
+              </optgroup>
+            </select>
+          </div>
+        </div>
+      </form>
+      <div class="results" aria-live="polite">
+        <div class="panel">
+          <h2>Longest simple span</h2>
+          <p class="bigspan" id="out-span">&nbsp;</p>
+          <p id="out-governs" class="muted"></p>
+          <p id="out-check" style="font-weight:600"></p>
+          <table class="checks">
+            <caption class="visually-hidden">Span by check</caption>
+            <thead><tr><th scope="col">Check</th><th scope="col">Max span</th><th scope="col" id="th-ratio">Your span</th></tr></thead>
+            <tbody id="checks-body"></tbody>
+          </table>
+          <h3 style="margin-top:22px;font-size:var(--s1)">Values used</h3>
+          <p class="small muted" id="out-values"></p>
+          <p class="disclaimer">Simply supported, uniform load, repetitive member factor 1.15, dry service, normal temperature. Deflection uses live load only. Rafter spans are horizontal projection with no ceiling attached. Design values are from the NDS Supplement (Southern Pine Table 4B, 2013 and later values; Douglas Fir-Larch Table 4A with size factor). Does not check bearing, notches, holes, point loads, snow drift, wind uplift or lateral support.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <a class="wordmark" href="index.html">Truscale</a>
+        <p>Software for home builders, remodelers, flippers and developers. Built in Dallas-Fort Worth.</p>
+      </div>
+      <div>
+        <h2>Product</h2>
+        <ul>
+          <li><a href="features.html">Features</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="beta.html">Private beta</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Free tools</h2>
+        <ul>
+          <li><a href="deal-calculator.html">Deal calculator</a></li>
+          <li><a href="house-facing.html">Which way does my house face?</a></li>
+          <li><a href="span-check.html">Joist and rafter span check</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Company</h2>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="privacy.html">Privacy</a></li>
+          <li><a href="terms.html">Terms</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Truscale. Dallas-Fort Worth, Texas.</span>
+      <span>We never share or sell your information.</span>
+    </div>
+  </div>
+</footer>
+<script type="module" src="assets/js/site.js"></script>
+<script type="module" src="assets/js/tool-span.js"></script>
+</body>
+</html>

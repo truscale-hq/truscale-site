@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Revisión rápida de claros de viguetas y vigas de techo | Truscale</title>
+<meta name="description" content="Revisión rápida de claros para viguetas de piso y vigas de techo: flexión, cortante y deflexión. No es un diseño. Un ingeniero con licencia en Texas debe diseñar la estructura.">
+<link rel="canonical" href="https://www.example.com/es/span-check.html">
+<link rel="alternate" hreflang="en" href="https://www.example.com/span-check.html">
+<link rel="alternate" hreflang="es" href="https://www.example.com/es/span-check.html">
+<link rel="alternate" hreflang="x-default" href="https://www.example.com/span-check.html">
+<meta name="theme-color" content="#1B1D1F">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Truscale">
+<meta property="og:title" content="Revisión rápida de claros de viguetas y vigas de techo | Truscale">
+<meta property="og:description" content="Revisión rápida de claros para viguetas de piso y vigas de techo: flexión, cortante y deflexión. No es un diseño. Un ingeniero con licencia en Texas debe diseñar la estructura.">
+<meta property="og:url" content="https://www.example.com/es/span-check.html">
+<meta property="og:image" content="https://www.example.com/img/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="es_US">
+<meta property="og:locale:alternate" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="preload" href="../assets/fonts/inter-tight-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../assets/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../assets/css/site.css">
+</head>
+<body>
+<a class="skip" href="#main">Ir al contenido</a>
+<div class="draft-banner" role="note">Nombre provisional, pendiente de revisión de marca</div>
+<header class="site-header">
+  <div class="wrap">
+    <a class="wordmark" href="index.html" aria-label="Truscale, inicio">Truscale</a>
+    <nav class="nav" id="site-nav" aria-label="Principal">
+      <a href="features.html">Funciones</a><a href="tools.html" aria-current="page">Herramientas gratis</a><a href="pricing.html">Precios</a><a href="about.html">Nosotros</a>
+      <a class="nav-cta" href="beta.html">Solicitar la beta</a>
+    </nav>
+    <div class="header-actions">
+      <div class="lang-toggle" role="group" aria-label="Idioma">
+        <a href="../span-check.html" hreflang="en" lang="en" aria-label="English">EN</a><span aria-current="true" lang="es">ES</span>
+      </div>
+      <a class="btn btn-primary btn-sm" href="beta.html">Solicitar la beta</a>
+      <button class="menu-btn" type="button" aria-expanded="false" aria-controls="site-nav">Menú</button>
+    </div>
+  </div>
+</header>
+<main id="main">
+
+
+<section class="page-head on-dark">
+  <div class="wrap">
+    <p class="crumbs"><a href="tools.html">Herramientas gratis</a></p>
+    <h1>Claros de viguetas y vigas de techo</h1>
+    <p class="lede">Escoja la madera, la separación y la carga. Vea el claro simple más largo y cuál revisión manda.</p>
+  </div>
+</section>
+<section class="section-tight">
+  <div class="wrap">
+    <p class="warn" role="note">Referencia rápida, no un diseño. Un ingeniero profesional con licencia en Texas debe diseñar la estructura.</p>
+    <noscript><p class="warn">Esta herramienta necesita JavaScript activado en su navegador.</p></noscript>
+    <div class="tool">
+      <form class="panel" id="span-form" novalidate>
+        <h2>Pieza y carga</h2>
+        <div class="fields">
+          <div class="field full">
+            <label for="species">Especie y grado</label>
+            <select id="species" name="species">
+              <option value="sp-2" selected>Pino del sur No. 2</option>
+              <option value="dfl-1">Douglas Fir-Larch No. 1</option>
+              <option value="dfl-2">Douglas Fir-Larch No. 2</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="size">Medida</label>
+            <select id="size" name="size">
+              <option value="2x6">2x6</option>
+              <option value="2x8" selected>2x8</option>
+              <option value="2x10">2x10</option>
+              <option value="2x12">2x12</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="span">Su claro (opcional)</label>
+            <input id="span" name="span" type="text" inputmode="decimal" placeholder="13'-0&quot;" aria-describedby="span-hint">
+            <span class="hint" id="span-hint">Pies y pulgadas, como 13'-6". Vigas de techo: claro horizontal.</span>
+          </div>
+          <fieldset class="field full">
+            <legend>Separación, a centros</legend>
+            <div class="seg">
+              <label><input type="radio" name="spacing" value="12"><span>12 in</span></label><label><input type="radio" name="spacing" value="16" checked><span>16 in</span></label><label><input type="radio" name="spacing" value="19.2"><span>19.2 in</span></label><label><input type="radio" name="spacing" value="24"><span>24 in</span></label>
+            </div>
+          </fieldset>
+          <div class="field full">
+            <label for="preset">Carga</label>
+            <select id="preset" name="preset">
+              <optgroup label="Viguetas de piso, deflexión L/360">
+                <option value="floor-40" selected>Áreas de estar: 40 psf viva, 10 psf muerta</option>
+                <option value="floor-30">Recámaras: 30 psf viva, 10 psf muerta</option>
+                <option value="floor-40-tile">Loseta o acabado pesado: 40 psf viva, 20 psf muerta</option>
+              </optgroup>
+              <optgroup label="Vigas de techo, deflexión L/240">
+                <option value="roof-20-10">Techo: 20 psf viva, 10 psf muerta</option>
+                <option value="roof-20-15">Techo más pesado: 20 psf viva, 15 psf muerta</option>
+              </optgroup>
+            </select>
+          </div>
+        </div>
+      </form>
+      <div class="results" aria-live="polite">
+        <div class="panel">
+          <h2>Claro simple más largo</h2>
+          <p class="bigspan" id="out-span">&nbsp;</p>
+          <p id="out-governs" class="muted"></p>
+          <p id="out-check" style="font-weight:600"></p>
+          <table class="checks">
+            <caption class="visually-hidden">Claro por revisión</caption>
+            <thead><tr><th scope="col">Revisión</th><th scope="col">Claro máximo</th><th scope="col" id="th-ratio">Su claro</th></tr></thead>
+            <tbody id="checks-body"></tbody>
+          </table>
+          <h3 style="margin-top:22px;font-size:var(--s1)">Valores usados</h3>
+          <p class="small muted" id="out-values"></p>
+          <p class="disclaimer">Apoyo simple, carga uniforme, factor de piezas repetidas 1.15, uso en seco, temperatura normal. La deflexión usa solo carga viva. Los claros de vigas de techo son en proyección horizontal sin plafón colgado. Los valores de diseño son del Suplemento NDS (Pino del sur Tabla 4B, valores de 2013 en adelante; Douglas Fir-Larch Tabla 4A con factor de tamaño). No revisa apoyo, muescas, perforaciones, cargas puntuales, acumulación de nieve, levantamiento por viento ni soporte lateral.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <a class="wordmark" href="index.html">Truscale</a>
+        <p>Software para constructores de casas, remodeladores, inversionistas y desarrolladores. Hecho en Dallas-Fort Worth.</p>
+      </div>
+      <div>
+        <h2>Producto</h2>
+        <ul>
+          <li><a href="features.html">Funciones</a></li>
+          <li><a href="pricing.html">Precios</a></li>
+          <li><a href="beta.html">Beta privada</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Herramientas gratis</h2>
+        <ul>
+          <li><a href="deal-calculator.html">Calculadora de negocios</a></li>
+          <li><a href="house-facing.html">¿Hacia dónde da mi casa?</a></li>
+          <li><a href="span-check.html">Claros de viguetas y vigas de techo</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Empresa</h2>
+        <ul>
+          <li><a href="about.html">Nosotros</a></li>
+          <li><a href="contact.html">Contacto</a></li>
+          <li><a href="privacy.html">Privacidad</a></li>
+          <li><a href="terms.html">Términos</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Truscale. Dallas-Fort Worth, Texas.</span>
+      <span>Nunca compartimos ni vendemos su información.</span>
+    </div>
+  </div>
+</footer>
+<script type="module" src="../assets/js/site.js"></script>
+<script type="module" src="../assets/js/tool-span.js"></script>
+</body>
+</html>

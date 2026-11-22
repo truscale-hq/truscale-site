@@ -1,0 +1,12 @@
+{
+  "name": "product-site",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Static marketing site. Zero runtime dependencies.",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "test": "node --test test/*.test.mjs",
+    "shots": "node scripts/shoot.mjs"
+  }
+}
