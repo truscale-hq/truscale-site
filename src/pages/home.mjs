@@ -21,10 +21,10 @@ export default {
         </div>
       </div>
       <dl class="titleblock" aria-label="${L('Product facts', 'Datos del producto')}">
-        <div><span>${L('Status', 'Estado')}</span><b>${L('Private beta', 'Beta privada')}</b></div>
-        <div><span>${L('Market', 'Mercado')}</span><b>DFW</b></div>
-        <div><span>${L('Runs on', 'Funciona en')}</span><b>Web, iPhone, Android</b></div>
-        <div><span>${L('Language', 'Idioma')}</span><b>English, español</b></div>
+        <div><dt>${L('Status', 'Estado')}</dt><dd>${L('Private beta', 'Beta privada')}</dd></div>
+        <div><dt>${L('Market', 'Mercado')}</dt><dd>DFW</dd></div>
+        <div><dt>${L('Runs on', 'Funciona en')}</dt><dd>Web, iPhone, Android</dd></div>
+        <div><dt>${L('Language', 'Idioma')}</dt><dd>English, español</dd></div>
       </dl>
     </div>
     <div class="hero-stage">

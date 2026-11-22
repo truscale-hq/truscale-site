@@ -170,8 +170,9 @@ strong { font-weight: 600; }
 .titleblock div { padding: 7px 12px 8px; border-left: 1px solid var(--line-dark); border-top: 1px solid var(--line-dark); }
 .titleblock div:nth-child(odd) { border-left: 0; }
 .titleblock div:nth-child(-n+2) { border-top: 0; }
-.titleblock span { display: block; color: var(--on-dark-2); font-weight: 500; }
-.titleblock b { display: block; font-family: var(--display); font-weight: 700; font-size: 0.9375rem; color: var(--white); letter-spacing: -0.01em; }
+.titleblock { margin: 0; }
+.titleblock dt { display: block; color: var(--on-dark-2); font-weight: 500; }
+.titleblock dd { margin: 0; display: block; font-family: var(--display); font-weight: 700; font-size: 0.9375rem; color: var(--white); letter-spacing: -0.01em; }
 
 /* Dimension string, the site's one drawing device */
 .dim { position: relative; height: 34px; color: var(--yellow); margin: 0 0 10px; }
@@ -377,6 +378,21 @@ fieldset { border: 0; padding: 0; margin: 0; min-width: 0; }
 .disclaimer { font-size: 0.8125rem; color: var(--ink-3); margin-top: 16px; }
 .warn {
   border: 2px solid var(--ink); padding: 14px 16px; font-weight: 600; margin-bottom: 24px; background: var(--yellow-soft);
+}
+
+.mobile-summary { display: none; }
+@media (max-width: 960px) {
+  .mobile-summary {
+    position: fixed; left: 12px; right: 12px; bottom: 12px; z-index: 40; display: flex; align-items: center; gap: 12px;
+    padding: 12px 16px; border-radius: 8px; background: var(--charcoal); color: var(--white); text-decoration: none;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); border-left: 6px solid var(--yellow);
+  }
+  .mobile-summary.go { border-left-color: #3BB273; }
+  .mobile-summary.nogo { border-left-color: #E5484D; }
+  .mobile-summary.hide { display: none; }
+  .mobile-summary b { font-family: var(--display); font-weight: 800; font-size: 1.125rem; }
+  .mobile-summary span { font-variant-numeric: tabular-nums; }
+  .mobile-summary .ms-go { margin-left: auto; font-size: 0.875rem; color: var(--on-dark-2); text-decoration: underline; }
 }
 
 /* Compass dial */

@@ -63,6 +63,16 @@ function render() {
   $('b-selling').textContent = usd.format(r.costs.selling);
   $('b-total').textContent = usd.format(r.costs.total);
   $('b-worst').textContent = usd.format(r.worstProfit);
+  const ms = $('mobile-summary');
+  ms.className = 'mobile-summary ' + { GO: 'go', CAUTION: 'caution', 'NO-GO': 'nogo' }[r.verdict];
+  $('ms-verdict').textContent = T[r.verdict];
+  $('ms-profit').textContent = usd.format(r.profit);
+}
+
+// The summary bar shows only on small screens while the result is off screen.
+const msBar = $('mobile-summary');
+if ('IntersectionObserver' in window) {
+  new IntersectionObserver(([e]) => msBar.classList.toggle('hide', e.isIntersecting)).observe($('deal-results'));
 }
 
 // Format money fields with thousands separators when the user leaves them.

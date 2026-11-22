@@ -85,7 +85,7 @@ ${head(L, true, L('Flip and build deal calculator', 'Calculadora de flips y obra
           ${pct('targetMarginPct', L('Target margin', 'Margen meta'), '15', L('Profit as a share of ARV.', 'Ganancia como porcentaje del ARV.'))}
         </div>
       </form>
-      <div class="results" aria-live="polite">
+      <div class="results" id="deal-results" aria-live="polite">
         <div class="panel">
           <h2>${L('Result', 'Resultado')}</h2>
           <div class="verdict" id="verdict"><b id="verdict-label">&nbsp;</b><p id="verdict-reason"></p></div>
@@ -112,6 +112,7 @@ ${head(L, true, L('Flip and build deal calculator', 'Calculadora de flips y obra
         </div>
       </div>
     </div>
+    <a class="mobile-summary" id="mobile-summary" href="#deal-results" aria-hidden="true" tabindex="-1"><b id="ms-verdict"></b><span id="ms-profit"></span><span class="ms-go">${L('See result', 'Ver resultado')}</span></a>
   </div>
 </section>`,
 };

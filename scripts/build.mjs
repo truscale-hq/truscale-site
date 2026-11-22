@@ -78,6 +78,15 @@ for (const lang of ['en', 'es']) {
   }
 }
 
+// Drop screenshots no page uses.
+{
+  const html = written.map((f) => readFileSync(f, 'utf8')).join('\n');
+  for (const f of readdirSync(IMG)) {
+    if (f === 'og.png' || f === 'manifest.json') continue;
+    if (!html.includes(`img/${f}`)) rmSync(join(IMG, f));
+  }
+}
+
 // sitemap.xml and robots.txt
 const site = config.siteUrl.replace(/\/$/, '');
 const today = new Date().toISOString().slice(0, 10);

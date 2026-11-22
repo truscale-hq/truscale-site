@@ -284,10 +284,10 @@ def og_image(out_dir):
     d = ImageDraw.Draw(im)
     yellow = (242, 194, 27)
     # Dimension string along the top, like a drawing
-    d.line((64, 70, 560, 70), fill=yellow, width=2)
+    d.line((64, 44, 560, 44), fill=yellow, width=2)
     for x in (64, 560):
-        d.line((x - 8, 78, x + 8, 62), fill=yellow, width=2)
-        d.line((x, 56, x, 84), fill=yellow, width=1)
+        d.line((x - 7, 51, x + 7, 37), fill=yellow, width=2)
+        d.line((x, 32, x, 56), fill=yellow, width=1)
     d.text((64, 140), BRAND, font=font("inter-tight-800", 84), fill=WHITE, anchor="ls")
     lines = ["Plans, takeoffs, deals and jobs", "for builders in Dallas-Fort Worth."]
     y = 236
@@ -301,9 +301,10 @@ def og_image(out_dir):
     # Product shot on the right, cropped from the takeoff markup
     shot = Image.open(os.path.join(out_dir, "takeoff.webp")).convert("RGB")
     crop = shot.crop((280, 470, 1000, 900))
-    crop = crop.resize((int(crop.width * 0.72), int(crop.height * 0.72)), Image.LANCZOS)
-    im.paste(crop, (W - crop.width + 40, H - crop.height - 40))
-    d.rectangle((W - crop.width + 40, H - crop.height - 40, W, H - 40), outline=(70, 72, 75), width=2)
+    crop = crop.resize((460, round(crop.height * 460 / crop.width)), Image.LANCZOS)
+    x0, y0 = W - crop.width, H - crop.height - 40
+    im.paste(crop, (x0, y0))
+    d.rectangle((x0 - 1, y0 - 1, W, y0 + crop.height), outline=(70, 72, 75), width=2)
     im.save(os.path.join(out_dir, "og.png"), "PNG", optimize=True)
 
 
