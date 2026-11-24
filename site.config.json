@@ -2,8 +2,8 @@
   "brandName": "Truscale",
   "draftNameBanner": false,
   "siteUrl": "https://truscale-site.onrender.com",
-  "betaEndpoint": "",
-  "contactEndpoint": "",
+  "betaEndpoint": "https://formspree.io/f/meagpnbv",
+  "contactEndpoint": "https://formspree.io/f/meagpnbv",
   "contactEmail": "",
   "contactPhone": ""
 }

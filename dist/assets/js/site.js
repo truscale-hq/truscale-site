@@ -39,10 +39,11 @@ for (const form of document.querySelectorAll('form[data-endpoint]')) {
     delete data.website;
     data.language = document.documentElement.lang;
     data.form = form.dataset.form;
+    data._subject = form.dataset.form === 'beta' ? 'New Truscale beta application' : 'New Truscale contact message';
     const endpoint = form.dataset.endpoint;
     if (!endpoint) {
       console.warn(`[dev] No endpoint is set for the "${form.dataset.form}" form in site.config.json. Nothing was sent or stored.`);
-      showDone();
+      if (err) err.textContent = form.dataset.errorText || 'Something went wrong. Try again.';
       return;
     }
     const btn = form.querySelector('[type=submit]');
