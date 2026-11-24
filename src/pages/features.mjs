@@ -157,7 +157,7 @@ export default {
       ${frame('selections-main', L('Countertop options for a kitchen: laminate, maple butcher block, speckled granite and white quartz, each with an installed price and a Good or Better tag, beside a 3D kitchen.', 'Opciones de cubierta para la cocina: laminado, bloque de maple, granito moteado y cuarzo blanco, cada una con precio instalado y etiqueta Bueno o Mejor, junto a una cocina en 3D.'))}
       <div class="shots two">
         <figure>${shot('kitchen-standard', L('Kitchen in 3D with standard finishes.', 'Cocina en 3D con acabados estándar.'), { sizes: '(max-width: 720px) 100vw, 360px' })}<figcaption>${L('Standard package', 'Paquete estándar')}</figcaption></figure>
-        <figure>${shot('kitchen-premium', L('Same kitchen with marble counters, natural oak cabinets and brass fixtures.', 'La misma cocina con cubierta de mármol, gabinetes de roble natural y accesorios de latón.'), { sizes: '(max-width: 720px) 100vw, 360px' })}<figcaption>${L('Premium package', 'Paquete superior')}</figcaption></figure>
+        <figure>${shot('kitchen-premium', L('Same kitchen with a marble waterfall island, natural wood cabinets and brass fixtures.', 'La misma cocina con isla de mármol en cascada, gabinetes de madera natural y accesorios de latón.'), { sizes: '(max-width: 720px) 100vw, 360px' })}<figcaption>${L('Premium package', 'Paquete superior')}</figcaption></figure>
       </div>
     </div>
   </section>
