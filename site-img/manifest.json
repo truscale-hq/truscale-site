@@ -1,0 +1,187 @@
+{
+ "dashboard": {
+  "w": 1440,
+  "h": 900,
+  "small": 720
+ },
+ "dashboard-main": {
+  "w": 1192,
+  "h": 900,
+  "small": null
+ },
+ "dashboard-focus": {
+  "w": 1160,
+  "h": 848,
+  "small": null
+ },
+ "dashboard-phone": {
+  "w": 390,
+  "h": 844,
+  "small": null
+ },
+ "projects": {
+  "w": 1440,
+  "h": 900,
+  "small": 720
+ },
+ "projects-main": {
+  "w": 1192,
+  "h": 900,
+  "small": null
+ },
+ "projects-focus": {
+  "w": 1160,
+  "h": 740,
+  "small": null
+ },
+ "takeoff": {
+  "w": 1440,
+  "h": 900,
+  "small": 720
+ },
+ "takeoff-main": {
+  "w": 1192,
+  "h": 900,
+  "small": null
+ },
+ "takeoff-focus": {
+  "w": 1160,
+  "h": 614,
+  "small": null
+ },
+ "plans": {
+  "w": 1440,
+  "h": 900,
+  "small": 720
+ },
+ "plans-main": {
+  "w": 1192,
+  "h": 900,
+  "small": null
+ },
+ "plans-focus": {
+  "w": 1160,
+  "h": 594,
+  "small": null
+ },
+ "site": {
+  "w": 1440,
+  "h": 900,
+  "small": 720
+ },
+ "site-main": {
+  "w": 1192,
+  "h": 900,
+  "small": null
+ },
+ "site-focus": {
+  "w": 1160,
+  "h": 614,
+  "small": null
+ },
+ "compliance": {
+  "w": 1440,
+  "h": 900,
+  "small": 720
+ },
+ "compliance-main": {
+  "w": 1192,
+  "h": 900,
+  "small": null
+ },
+ "compliance-focus": {
+  "w": 1160,
+  "h": 614,
+  "small": null
+ },
+ "model-3d": {
+  "w": 1440,
+  "h": 900,
+  "small": 720
+ },
+ "model-3d-main": {
+  "w": 1192,
+  "h": 900,
+  "small": null
+ },
+ "model-3d-focus": {
+  "w": 1160,
+  "h": 614,
+  "small": null
+ },
+ "floor-plan": {
+  "w": 1440,
+  "h": 900,
+  "small": 720
+ },
+ "floor-plan-main": {
+  "w": 1192,
+  "h": 900,
+  "small": null
+ },
+ "floor-plan-focus": {
+  "w": 1160,
+  "h": 678,
+  "small": null
+ },
+ "model-walls": {
+  "w": 1440,
+  "h": 900,
+  "small": 720
+ },
+ "model-walls-main": {
+  "w": 1192,
+  "h": 900,
+  "small": null
+ },
+ "sheets": {
+  "w": 1440,
+  "h": 900,
+  "small": 720
+ },
+ "sheets-main": {
+  "w": 1192,
+  "h": 900,
+  "small": null
+ },
+ "sheet-a101": {
+  "w": 1600,
+  "h": 1067,
+  "small": 720
+ },
+ "sheet-m201": {
+  "w": 1600,
+  "h": 1067,
+  "small": 720
+ },
+ "selections": {
+  "w": 1440,
+  "h": 900,
+  "small": 720
+ },
+ "selections-main": {
+  "w": 1192,
+  "h": 900,
+  "small": null
+ },
+ "selections-focus": {
+  "w": 1160,
+  "h": 828,
+  "small": null
+ },
+ "kitchen-premium": {
+  "w": 496,
+  "h": 710,
+  "small": null
+ },
+ "kitchen-standard": {
+  "w": 496,
+  "h": 710,
+  "small": null
+ },
+ "floor-plan-phone": {
+  "w": 780,
+  "h": 1688,
+  "small": null
+ }
+}
