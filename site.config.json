@@ -1,7 +1,7 @@
 {
   "brandName": "Truscale",
-  "draftNameBanner": true,
-  "siteUrl": "https://www.example.com",
+  "draftNameBanner": false,
+  "siteUrl": "https://truscale-site.onrender.com",
   "betaEndpoint": "",
   "contactEndpoint": "",
   "contactEmail": "",
