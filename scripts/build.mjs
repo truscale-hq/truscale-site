@@ -30,6 +30,11 @@ mkdirSync(join(DIST, 'es'), { recursive: true });
 cpSync(join(ROOT, 'src', 'assets'), join(DIST, 'assets'), { recursive: true });
 cpSync(join(ROOT, 'src', 'fonts'), join(DIST, 'assets', 'fonts'), { recursive: true });
 
+// Sample-data demo of the app, served at /demo/ (built from the app repo with sample data).
+if (existsSync(join(ROOT, 'site-demo', 'index.html'))) {
+  cpSync(join(ROOT, 'site-demo'), join(DIST, 'demo'), { recursive: true });
+}
+
 // Screenshots and the Open Graph image
 const IMG = join(DIST, 'img');
 const manifestPath = join(IMG, 'manifest.json');
@@ -131,7 +136,11 @@ const problems = [];
 for (const f of walk(DIST)) {
   if (!/\.(html|css|js|xml|txt|svg)$/.test(f)) continue;
   const text = readFileSync(f, 'utf8');
-  for (const [re, label] of BANNED) if (re.test(text)) problems.push(`${f}: ${label}`);
+  const inDemo = f.includes(join(DIST, 'demo'));
+  for (const [re, label] of BANNED) {
+    if (inDemo && label === 'arrow glyph') continue; // keyboard-help arrows inside the app demo
+    if (re.test(text)) problems.push(`${f}: ${label}`);
+  }
   if (/\.html$/.test(f)) {
     const ext = text.match(/(?:src|href)="https?:\/\/[^"]+"/g) || [];
     const bad = ext.filter((m) => !m.startsWith(`href="${site}`));
