@@ -33,7 +33,11 @@ cpSync(join(ROOT, 'src', 'fonts'), join(DIST, 'assets', 'fonts'), { recursive: t
 // Screenshots and the Open Graph image
 const IMG = join(DIST, 'img');
 const manifestPath = join(IMG, 'manifest.json');
-if (savedImg) {
+const committedImg = join(ROOT, 'site-img');
+if (!savedImg && existsSync(join(committedImg, 'manifest.json'))) {
+  // Hosted builds (Render) use the prepared, name-free images committed in site-img/.
+  cpSync(committedImg, IMG, { recursive: true });
+} else if (savedImg) {
   cpSync(savedImg, IMG, { recursive: true });
   rmSync(savedImg, { recursive: true, force: true });
   cpSync(join(ROOT, '.img-manifest.json'), manifestPath);
